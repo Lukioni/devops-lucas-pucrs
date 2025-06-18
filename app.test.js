@@ -1,8 +1,5 @@
 const request = require('supertest');
-const express = require('express');
-
-const app = express();
-app.get('/', (req, res) => res.send('Aplicação funcionando!'));
+const app = require('./index');
 
 test('GET / deve retornar mensagem correta', async () => {
   const res = await request(app).get('/');
